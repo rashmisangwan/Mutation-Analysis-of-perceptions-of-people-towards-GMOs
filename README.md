@@ -1,23 +1,19 @@
-1. Install panda for python in windows
+1. Install libraries `pip install pandas tweepy indicoio`
 
-2. Install tweepy for python in windows
+2. In terminal move to this repo's directory and run
 
-3. In terminal move to the current directory and run
+    > This fetches the tweets related to the array of words mentioned in line 35 of fetch.py
 
+    > file named 'twitter_data.txt' will be created
 
-    > # This fetches the tweets related to the array of words mentioned in line 35 of fetch.py
-
-    > # file named 'twitter_data.txt' will be created
-
-    > python fetch.py > twitter_data.txt
+    > #### python fetch.py
 
 
-4. In terminal in current directory run
+3. In terminal in current directory run
 
+    > file named 'twitter_data.json' and 'twitter_data.csv' will be created
 
-    > # file named 'twitter_data.json' and 'twitter_data.csv' will be created
-
-    > # This parses the twitter_data.txt to JSON data and -
+    > This parses the twitter_data.txt to JSON data and -
 
         - save it in twitter_data.json file
 
@@ -27,10 +23,13 @@
 
             - line 32-40 acts as the Content for the selected fields for the CSV file
 
-        - Prints the selected data to terminal (Command Prompt)
+        - Analyse and adds the sentiment score for each tweet.
 
-    > python parse.py
+    > #### python parse.py
 
+4. Parse the csv files using various parsers - like for language, location and time of days, etc. These will create an aggregated table that can be used for charts generation. Run `python parse-*.py` with * as chosen parser.
+
+5. Remove junks like - retweets, unknown, etc. Run `python remove-*.py`with * as chosen parser.
 
 5. Open the CSV file in msexcel or any other software or online that supports CSV
 
