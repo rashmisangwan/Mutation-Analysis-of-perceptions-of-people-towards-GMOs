@@ -13,19 +13,19 @@ def main():
     '''
 
     # Open the data files
-    tweets_file = open('./twitter_data.txt', 'r')               # Fetched tweets by Tweepy are in here
-    tweets_json_file = open('./twitter_data.json', 'a')         # Fetched tweets are put here after refining the jSON
-    tweets_csv_file = open('./twitter_data.csv', 'a')           # Fetched tweets are put here with selected keys in CSV format
+    tweets_file         = open('./twitter_data.txt', 'r')     # Fetched tweets by Tweepy are in here
+    tweets_json_file    = open('./twitter_data.json', 'a')    # Fetched tweets are put here after refining the jSON
+    tweets_csv_file     = open('./twitter_data.csv', 'a')     # Fetched tweets are put here with selected keys in CSV format
 
     # Make the file CSV ready
     csvwriter = csv.writer(tweets_csv_file)
 
     # Init data variables
-    indicoio.config.api_key = '################################' # Indicoio API key for sentiment score API
+    indicoio.config.api_key = '448b5ba2f1adb03b23e2a152ef28a6b6' # Indicoio API key for sentiment score API
     headerSet = False                                            # Flag for setting the header row
 
     tweets_json_file.write('[')                                  # Data fetched is JSON data array without the enclosing '[' bracket, hence needs to be mannually inserted
-
+    
     # Loop over the fetched tweep fron the the tweeps_file
     for unparsedTweet in tweets_file:
         if not unparsedTweet:
